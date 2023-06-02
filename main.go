@@ -5,6 +5,7 @@ import "fmt"
 func CreatCode(divide string, parts ...string) (code string, err bool) {
 
 	fmt.Println("divide   ", divide)
+	fmt.Println("parts   ", parts)
 	fmt.Println("len(parts)   ", len(parts))
 
 	if len(parts) == 0 {
@@ -24,7 +25,7 @@ func CreatCode(divide string, parts ...string) (code string, err bool) {
 }
 
 func main() {
-	//CreatCode("29", "VA", "2131")
-
-	fmt.Println(CreatCode("-", "29", "VA", "2151"))
+	//
+	code, _ := CreatCode("", "29", "VA", "2131")
+	fmt.Println(code)
 }

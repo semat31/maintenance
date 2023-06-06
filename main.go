@@ -2,7 +2,9 @@ package main
 
 import "fmt"
 
-func CreatCode(divide string, parts ...string) (code string, err bool) {
+type Code string
+
+func NewCode(divide string, parts ...string) (code string, err bool) {
 
 	fmt.Println("divide   ", divide)
 	fmt.Println("parts   ", parts)
@@ -26,6 +28,6 @@ func CreatCode(divide string, parts ...string) (code string, err bool) {
 
 func main() {
 	//
-	code, _ := CreatCode("", "29", "VA", "2131")
+	code, _ := NewCode("/", "29", "VA", "2131")
 	fmt.Println(code)
 }

@@ -7,7 +7,7 @@ import "fmt"
 type Code string
 
 // ***
-func New(divide Delimiter, parts ...string) (Code, bool) {
+func New(divide *Delimiter, parts ...string) (Code, bool) {
 
 	fmt.Println("divide   ", divide)
 	fmt.Println("parts   ", parts)
@@ -23,7 +23,7 @@ func New(divide Delimiter, parts ...string) (Code, bool) {
 		for i, part := range parts {
 			code = code + part
 			if i < len(parts)-1 {
-				code = code + string(divide)
+				code = code + divide.delimiter
 			}
 		}
 		err = true

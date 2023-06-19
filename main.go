@@ -7,8 +7,15 @@ import (
 )
 
 func main() {
-	//
-	code1, _ := code.New("/", "29", "VA", "2131")
+	d := code.NewDelimiter("")
+
+	code1, _ := code.New(d, "29", "VA", "2131")
 	fmt.Println(code1)
 
+	code2, _ := code.New(d, "29", "VA", "2131")
+	fmt.Println(code2)
 }
+
+// func (c code.Code) Splitter() []string {
+// 	return []string{}
+// }

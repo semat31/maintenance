@@ -1,7 +1,9 @@
 package code
 
-type Delimiter string
+type Delimiter struct {
+	delimiter string
+}
 
-func NewDelimiter(d string) Delimiter {
-	return Delimiter(d)
+func NewDelimiter(d string) *Delimiter {
+	return &Delimiter{d}
 }

@@ -31,3 +31,8 @@ func New(divide *Delimiter, parts ...string) (Code, bool) {
 
 	return Code(code), err
 }
+
+// **
+func (c Code) Splitter(delimiter Delimiter, splitter SplitFunc) []string {
+	return splitter(delimiter.delimiter, c)
+}

@@ -1,5 +1,3 @@
 package code
 
-type Service interface {
-	Splitter() []string
-}
+type SplitFunc func(d string, c Code) []string

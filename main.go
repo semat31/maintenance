@@ -6,14 +6,15 @@ import (
 	"github.com/semat31/maintenance/code"
 )
 
+func splitter(d string, c code.Code) []string {
+	return []string{d, string(c), "c"}
+}
+
 func main() {
 	d := code.NewDelimiter("-")
-
-	var sp code.SplitFunc
 
 	code1, _ := code.New(d, "29", "VA", "2131")
 	fmt.Println(code1)
 
-	fmt.Println(code1.Splitter(*d,sp))
+	fmt.Println(code1.Splitter(d, splitter))
 }
-

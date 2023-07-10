@@ -1,9 +1,15 @@
 package code
 
 // **
-type SplitFunc func(d string, c Code) []string
+func IsCode(code string) (isCode bool) {
+
+	return
+}
 
 // **
-func (c Code) Splitter(delimiter *Delimiter, splitter SplitFunc) []string {
-	return splitter(delimiter.delimiter, c)
+func SplitCode(code string) (sliceCode []string, err bool) {
+
+	return
 }
+
+// **

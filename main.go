@@ -8,7 +8,7 @@ import (
 
 func main() {
 
-	code1 := "29VA1121"
+	code1 := "2V1"
 	fmt.Println(code1)
 
 	isCode := code.IsCode(code1)

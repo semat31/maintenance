@@ -2,19 +2,22 @@ package main
 
 import (
 	"fmt"
+	"github.com/semat31/maintenance/store"
 
-	"github.com/semat31/maintenance/code"
+	//"github.com/semat31/maintenance/code"
 )
 
 func main() {
 
-	code1 := "2V1"
-	fmt.Println(code1)
+	device:=store.Device{
+		Code: "29VA1121",
+		Name: "Valve",
+		Categorie: "Грузоподъемная техника",
+		Serial: "W42355 Y000624",
+		Commissioning: "2015",
+	}
 
-	isCode := code.IsCode(code1)
-	fmt.Println(isCode)
 
-	sliceCode, err := code.SplitCode(code1)
-	fmt.Println(sliceCode, err)
+	fmt.Println(device)
 
 }

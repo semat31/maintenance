@@ -17,7 +17,6 @@ func main() {
 		Commissioning: "2015",
 	}
 
-
 	fmt.Println(device)
 
 }
